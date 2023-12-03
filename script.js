@@ -5,6 +5,14 @@ const para = document.createElement("p")
 const container = document.createElement("div")
 const row1 = document.createElement("div")
 const input = document.createElement("input")
+input.addEventListener("input", () => {
+    if (input.value != "0" || input.value != 1 || input.value != 2 || input.value != 3 || input.value != 4 || input.value != 5 || input.value != 6 || input.value != 7 || input.value != 8 || input.value != 9) {
+        alert("word is not valid in calculation")
+        deleted()
+    }
+   
+})
+
 //row 1 buttons
 const row2 = document.createElement("div")
 const clear = document.createElement("button")
@@ -171,8 +179,8 @@ equal.innerText = "="
 
 //function
 function display(val) {
-    var i= document.getElementById("result").value += val
-    // console.log(typeof(i));
+    var i = document.getElementById("result").value += val
+    console.log(i);
 }
 function evaluvation() {
     let x = document.getElementById("result").value;
